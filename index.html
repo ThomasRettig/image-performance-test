@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://unpkg.com/normalize.css@8.0.1/normalize.css" rel="stylesheet">
+      <link href="./styles.css" rel="stylesheet">
+      <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+      <link href="./favicon.svg" rel="icon" type="svg+xml">
+      <title>Image speed test</title>
+   </head>
+   <body>
+   	<header>
+      <h1>JPG vs AVIF comparison</h1>
+      <p>By <a href="https://twitter.com/ThomasRettig13" target="blank" title="Visit Twitter profile">@thomasrettig13</a></p>
+  	</header>
+      <figure>
+         <img src="https://res.cloudinary.com/cloudinary-sucks-so-fucking-much/image/upload/v1638164809/image-1_b4dmng.jpg" id="img-one">
+         <span class="caption">JPG (original)</span>
+         <figcaption>Format: JPG<span id="info">2400 × 1600 <span class="uninteractive">//</span> 179.7 KB</span></figcaption>
+         <button onclick="pixelateone()">Pixelate image</button><a href="https://res.cloudinary.com/cloudinary-sucks-so-fucking-much/image/upload/v1638164809/image-1_b4dmng.jpg" target="blank" class="faux-button">Open in new tab <img class="icon" src="https://fonts.gstatic.com/s/i/materialicons/open_in_new/v21/24px.svg"></a><a href="https://unsplash.com/photos/iSaDQdcPozk" class="faux-button" target="blank">Unsplash link <img class="icon" src="https://fonts.gstatic.com/s/i/materialicons/open_in_new/v21/24px.svg"></a>
+      </figure>
+      <figure>
+         <img src="https://res.cloudinary.com/cloudinary-sucks-so-fucking-much/image/upload/v1638164809/image-1_bhflxh.avif" id="img-two">
+         <span class="caption">AVIF (92% decrease)</span>
+         <figcaption>Although some gradients are banded due to compression, there is overall negligible difference. <span id="info">2400 × 1600 <span class="uninteractive">//</span> 14.4 KB</span></figcaption>
+         <button onclick="pixelatetwo()">Pixelate image</button><a href="https://res.cloudinary.com/cloudinary-sucks-so-fucking-much/image/upload/v1638164809/image-1_bhflxh.avif" target="blank" class="faux-button">Open in new tab <img class="icon" src="https://fonts.gstatic.com/s/i/materialicons/open_in_new/v21/24px.svg"></a><a href="https://unsplash.com/photos/iSaDQdcPozk" class="faux-button" target="blank">Unsplash link <img class="icon" src="https://fonts.gstatic.com/s/i/materialicons/open_in_new/v21/24px.svg"></a>
+      </figure>
+      <h2>Another example</h2>
+      <figure>
+         <img src="https://res.cloudinary.com/cloudinary-sucks-so-fucking-much/image/upload/v1638171194/image-2_lioram.jpg" id="img-three">
+         <span class="caption">JPG (original)</span>
+         <figcaption>A photo in JPG format. It is a traditional format, thus it is not very space efficient.<span id="info">2400 × 1600 <span class="uninteractive">//</span> 853.6 KB</span></figcaption>
+         <button onclick="pixelatethree()">Pixelate image</button><a href="https://res.cloudinary.com/cloudinary-sucks-so-fucking-much/image/upload/v1638171194/image-2_lioram.jpg" target="blank" class="faux-button">Open in new tab<img class="icon" src="https://fonts.gstatic.com/s/i/materialicons/open_in_new/v21/24px.svg"></a><a href="https://unsplash.com/photos/U1xx7caDZgs" class="faux-button" target="blank">Unsplash link <img class="icon" src="https://fonts.gstatic.com/s/i/materialicons/open_in_new/v21/24px.svg"></a>
+      </figure>
+      <figure>
+         <img src="https://res.cloudinary.com/cloudinary-sucks-so-fucking-much/image/upload/v1638171194/image-2_fcjxoi.avif" id="img-four">
+         <span class="caption">AVIF (71% decrease)</span>
+         <figcaption>A photo in AVIF format. It is a next-generation format that aims to significantly reduce file size.<span id="info">2400 × 1600 <span class="uninteractive">//</span> 246 KB</span></figcaption>
+         <button onclick="pixelatefour()">Pixelate image</button><a href="https://res.cloudinary.com/cloudinary-sucks-so-fucking-much/image/upload/v1638171194/image-2_fcjxoi.avif" target="blank" class="faux-button">Open in new tab<img class="icon" src="https://fonts.gstatic.com/s/i/materialicons/open_in_new/v21/24px.svg"></a><a href="https://unsplash.com/photos/U1xx7caDZgs" class="faux-button" target="blank">Unsplash link <img class="icon" src="https://fonts.gstatic.com/s/i/materialicons/open_in_new/v21/24px.svg"></a>
+      </figure>
+      <footer>
+      <p><a href="#"><span class="emoji">⬆</span> Back to top</a></p>
+  	  </footer>
+      <script>
+         function pixelateone() {
+            var element = document.getElementById("img-one");
+            element.classList.add("pixel-rendering");
+         }
+         
+         function pixelatetwo() {
+            var element = document.getElementById("img-two");
+            element.classList.add("pixel-rendering");
+         }
+
+         function pixelatethree() {
+            var element = document.getElementById("img-three");
+            element.classList.add("pixel-rendering");
+         }
+
+         function pixelatefour() {
+            var element = document.getElementById("img-four");
+            element.classList.add("pixel-rendering");
+         }
+      </script>
+   </body>
+</html>
