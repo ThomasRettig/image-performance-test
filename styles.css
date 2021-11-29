@@ -43,7 +43,7 @@
 
  	h1 {
  		letter-spacing: -0.1vw;
- 		font-feature-settings: "cv11";
+ 		font-feature-settings: "cv10";
  		font-variation-settings: "wght" 800;
  	}
 
@@ -163,7 +163,7 @@
 
  	.caption {
  	    position: relative;
- 	    top: -30px;
+ 	    top: -31px;
  	    color: black;
  	    left: 0;
  	    background: white;
