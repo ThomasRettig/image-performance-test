@@ -1,13 +1,8 @@
 	:root {
- 		--body-font: "Inter", system-ui, sans-serif;
+ 		--body-font: "Inter var", system-ui, sans-serif;
+ 		--accent-font: 'InterDisplay var';
  		--mono-font: "Consolas", monospace;
  		--border-radius: 10px;
- 	}
-
- 	@supports (font-variation-settings: normal) {
- 		:root {
- 			--body-font: "Inter var", system-ui, sans-serif;
- 		}
  	}
 
  	:focus {
@@ -42,13 +37,11 @@
  	}
 
  	h1 {
- 		letter-spacing: -0.1vw;
- 		font-feature-settings: "cv10";
- 		font-variation-settings: "wght" 800;
+ 		font-variation-settings: "wght" 900;
  	}
 
- 	h1::selection {
- 	    -webkit-text-fill-color: black;
+ 	h1, h2, h3, h4, h5, h6 {
+ 		font-family: var(--accent-font);
  	}
 
  	html {
@@ -60,9 +53,17 @@
  		font-family: var(--body-font);
  	}
 
+ 	header {
+ 		margin-bottom: -25px;
+ 	}
+
  	a {
  		text-decoration: none;
  		color: inherit;
+ 	}
+
+ 	p {
+ 		max-width: 700px;
  	}
 
  	figure {
@@ -163,7 +164,7 @@
 
  	.caption {
  	    position: relative;
- 	    top: -31px;
+ 	    top: -30px;
  	    color: black;
  	    left: 0;
  	    background: white;
